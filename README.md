@@ -1,2 +1,3 @@
-# aad_b2c_custom_behavior
+# AAD B2C Custom Behavior
+
 Azure Active Directory B2C Customizing Behavior
