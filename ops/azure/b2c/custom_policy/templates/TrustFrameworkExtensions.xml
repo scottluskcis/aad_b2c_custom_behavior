@@ -93,6 +93,7 @@
           </InputClaims>
           <OutputClaims>
             <OutputClaim ClaimTypeReferenceId="loyaltyNumber" PartnerClaimType="loyaltyNumber" />
+            <OutputClaim ClaimTypeReferenceId="accountId" PartnerClaimType="accountId" />
           </OutputClaims>
           <UseTechnicalProfileForSessionManagement ReferenceId="SM-Noop" />
         </TechnicalProfile>
@@ -117,10 +118,10 @@
     <!-- claims provider to authenticate with Azure AD -->
     <ClaimsProvider>
       <Domain>{{AzureAdTenant}}</Domain>
-      <DisplayName>Login using {{AccountDisplayName}} Azure AD</DisplayName>
+      <DisplayName>Login using {{AccountDisplayName}}</DisplayName>
       <TechnicalProfiles>
         <TechnicalProfile Id="OIDC-AZURE-AD">
-          <DisplayName>{{AccountDisplayName}} Azure AD</DisplayName>
+          <DisplayName>{{AccountDisplayName}}</DisplayName>
           <Description>Login with your {{AccountDisplayName}} account</Description>
           <Protocol Name="OpenIdConnect"/>
           <Metadata>
